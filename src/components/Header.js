@@ -10,12 +10,15 @@ function Header() {
             </a>
             <Menu>
                 <div>Model S</div>
+                <div>Model 3</div>
                 <div>Model X</div>
                 <div>Model Y</div>
+                <div>Solar Roof</div>
+                <div>Solar Panels</div>
             </Menu>
             <RightMenu>
                 <a href="#">Shop</a>
-                <a href="#">Tesla Account</a>
+                <a href="#">Account</a>
                 <MenuIconContainer>
                     <MenuIcon />
                 </MenuIconContainer>

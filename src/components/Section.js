@@ -12,6 +12,7 @@ function Section() {
                 <LeftButton>Custom Order</LeftButton>
                 <RightButton>Existing Inventory</RightButton>
             </Buttons>
+            <ArrowDown src="/images/down-arrow.svg"/>
         </Container>
     )
 }
@@ -39,6 +40,7 @@ const ItemText = styled.div`
 
 const Buttons = styled.div`
     display:flex;
+    margin-bottom: 30px;
 `
 
 const LeftButton = styled.div`
@@ -54,10 +56,17 @@ const LeftButton = styled.div`
     font-size: 12px;
     opacity: 0.85;
     margin: 8px;
+    cursor: pointer;
 `
 
 const RightButton = styled(LeftButton)`
     background-color: white;
     color: black;
     opacity: 0.65;
+`
+
+const ArrowDown = styled.img`
+    height: 40px;
+    margin-bottom: 10px;
+    animation: animateDown infinite 1.5s;
 `
