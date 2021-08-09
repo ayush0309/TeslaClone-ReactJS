@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function Section() {
+function Section(props) {
     return (
-        <Container>
+        <Container backgroundImg={props.backgroundImg}>
             <ItemText>
-                <h1>Model S</h1>
-                <p>Order Online for Touchless Delivery</p>
+                <h1>{props.title}</h1>
+                <p>{props.description}</p>
             </ItemText>
             <Buttons>
-                <LeftButton>Custom Order</LeftButton>
-                <RightButton>Existing Inventory</RightButton>
+                <LeftButton>{props.leftBtnText}</LeftButton>
+                <RightButton>{props.rightBtnText}</RightButton>
             </Buttons>
             <ArrowDown src="/images/down-arrow.svg"/>
         </Container>
@@ -22,7 +22,7 @@ export default Section
 const Container = styled.div`
     width: 100%;
     height: 100vh;
-    background-image: url('/images/model-s.jpg');
+    background-image: ${props => `url('/images/${props.backgroundImg}')`};
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -67,6 +67,6 @@ const RightButton = styled(LeftButton)`
 
 const ArrowDown = styled.img`
     height: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     animation: animateDown infinite 1.5s;
 `
