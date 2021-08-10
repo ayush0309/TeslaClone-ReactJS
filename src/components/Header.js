@@ -13,6 +13,7 @@ function Header() {
             </a>
             <Menu>
                 <div>Model S</div>
+                <div>Model 3</div>
                 <div>Model X</div>
                 <div>Model Y</div>
             </Menu>
@@ -49,7 +50,7 @@ const Container = styled.div`
     min-height: 60px;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 30px;
     position: fixed;
     top: 0;
     left: 0;
@@ -100,6 +101,7 @@ const BurgerNav = styled.div`
     padding: 20px;
     list-style: none;
     transform: ${props => props.status ? 'translateX(0)' : 'translateX(100%)'};
+    transition: transform 0.2s ease-in;
     li {
         padding : 15px 0;
         border-bottom: 1px solid rgba(0,0,0,0.2);
